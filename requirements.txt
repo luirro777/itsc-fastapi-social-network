@@ -1,0 +1,5 @@
+fastapi[standard]>=0.115   # incluye uvicorn, python-multipart, httpx y email-validator
+sqlmodel>=0.0.22           # incluye SQLAlchemy 2.x y Pydantic v2
+pyjwt>=2.9                 # clase 2
+pwdlib[argon2]>=0.2        # clase 2
+pytest>=8.0                # clase 2
