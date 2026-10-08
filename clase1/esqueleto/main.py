@@ -1,6 +1,6 @@
 """CLASE 1 — ESQUELETO: una API que guarda datos (FastAPI + SQLModel + SQLite).
 
-Ejecutar:   uvicorn main:app --reload      →   http://127.0.0.1:8000/docs
+Ejecutar:   uv run fastapi dev clase1/esqueleto/main.py      →   http://127.0.0.1:8000/docs
 Los endpoints sin terminar responden 501 ("no implementado"): así los ves en /docs
 desde el principio y la app siempre arranca. Busca los  # TODO n  y ve en orden.
 Si cambias las tablas, borra clase1.db (create_all NO modifica tablas existentes).
