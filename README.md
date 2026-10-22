@@ -16,10 +16,12 @@ uv sync
 ## Correr la API
 
 En la medida que vayamos avanzando con las clases, la ruta
-irá cambiando. Por ahora será
+irá cambiando. Al 22-10-2026 la misma es:
 
 ```
-uv run fastapi dev clase1/esqueleto/main.py
+uv run fastapi dev clase2/esqueleto/main.py
 ```
+
+
 
 En el código fuente encontrarán la consigna
