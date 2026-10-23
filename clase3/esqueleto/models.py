@@ -94,3 +94,4 @@ class PostWithLikes(PostPublic):  # SALE: el post + cuántos likes tiene (se cal
 #   Dos campos con primary_key=True = clave primaria COMPUESTA (user_id, post_id).
 #   Pregunta: ¿qué impide la base de datos con esta clave? ¿Y con ondelete="CASCADE"?
 #   (Borra clase3.db y reinicia después de agregar la tabla.)
+
