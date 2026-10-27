@@ -144,4 +144,15 @@ def test_deleting_a_post_deletes_its_likes(client, engine):
     #   3) alice borra el post (DELETE /posts/{id}) → 204
     #   4) vuelve a mirar la tabla Like: tiene que estar vacía (ON DELETE CASCADE)
     #   Bonus: comenta ondelete="CASCADE" en models.py, borra clase3.db y mira cómo falla el test.
-    pytest.fail("TODO 8: escribe este test")
+    #pytest.fail("TODO 8: escribe este test")
+    from models import Like
+    alice = register_and_login(client, "alice")
+    bob = register_and_login(client, "bob")
+    post_id = new_post(client, alice)
+    client.put(f"/posts/{post_id}/like", headers = bob).status_code == 200
+    with Session(engine) as db:
+        assert len(db.exec(select(Like)).all()) == 1
+    assert client.delete(f"/posts/{post_id}", headers = alice).status_code == 204
+    with Session(engine) as db:
+            assert db.exec(select(Like)).all() == []
+
